@@ -405,28 +405,31 @@
     flex-direction: column;
     justify-content: flex-end;
     overflow: hidden;
+    background: var(--ink);
   }
   .hero-video-wrap {
     position: absolute;
     inset: 0;
     z-index: 0;
     overflow: hidden;
+    background: var(--ink);
   }
   .hero-video-wrap video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center center;
+    background: var(--ink);
   }
   .hero-video-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0.3) 0%,
-      rgba(0, 0, 0, 0.1) 40%,
-      rgba(0, 0, 0, 0.5) 70%,
-      rgba(0, 0, 0, 0.92) 100%
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(0, 0, 0, 0.15) 60%,
+      rgba(0, 0, 0, 0.75) 100%
     );
     z-index: 1;
     pointer-events: none;
