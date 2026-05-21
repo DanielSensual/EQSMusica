@@ -107,13 +107,14 @@
   /* ---------- TOKENS ---------- */
   :root {
     --ink: #000000;
-    --ink-2: #282A23;
-    --cream: #D0CAC2;
-    --cream-dim: #828E98;
-    --ash: #828E98;
+    --ink-2: #1A1C17;
+    --cream: #E8E0D4;
+    --cream-dim: #A69E93;
+    --ash: #8A8178;
     --blood: #E6AE6D;
     --blood-dark: #C48B4A;
-    --hairline: rgba(208, 202, 194, 0.12);
+    --accent-deep: #943240;
+    --hairline: rgba(232, 224, 212, 0.12);
     --focus-ring: #E6AE6D;
   }
 
@@ -184,7 +185,7 @@
   /* ---------- MARQUEE ---------- */
   .marquee-bar {
     background: var(--blood);
-    color: var(--cream);
+    color: var(--ink);
     overflow: hidden;
     border-bottom: 1px solid var(--ink);
     padding: 9px 0;
@@ -192,6 +193,7 @@
     font-size: 11px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
+    font-weight: 600;
   }
   .marquee-bar[aria-label] { /* semantic hint */ }
   .marquee-track {
@@ -292,7 +294,7 @@
     text-decoration: none;
     transition: all 0.2s;
   }
-  .nav-cta:hover { background: var(--blood); color: var(--cream); }
+  .nav-cta:hover { background: var(--blood); color: var(--ink); box-shadow: 0 0 24px rgba(230, 174, 109, 0.3); }
   .nav-cta .arrow { font-family: 'Cormorant Garamond', serif; font-size: 16px; }
 
   /* ---------- HAMBURGER BUTTON ---------- */
@@ -399,6 +401,17 @@
     margin: 0 auto;
     padding: 90px 40px 60px;
     position: relative;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 60%;
+    height: 140%;
+    background: radial-gradient(ellipse at center, rgba(230, 174, 109, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
   }
   .hero-meta {
     display: flex;
@@ -534,7 +547,7 @@
   }
   .lane:last-child { border-right: none; padding-right: 0; }
   .lane:nth-child(2), .lane:nth-child(3) { padding-left: 40px; }
-  .lane:hover { background: rgba(230, 174, 109, 0.06); }
+  .lane:hover { background: rgba(230, 174, 109, 0.09); }
   .lane-num {
     font-family: 'Montserrat', sans-serif;
     font-size: 11px;
@@ -687,6 +700,7 @@
     align-items: flex-end;
     padding: 32px;
     color: var(--cream);
+    box-shadow: 0 24px 60px rgba(198, 139, 74, 0.18);
   }
   .feature-visual::after {
     content: '';
