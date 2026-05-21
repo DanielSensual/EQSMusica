@@ -397,21 +397,48 @@
 
   /* ---------- HERO ---------- */
   .hero {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+  .hero-video-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .hero-video-wrap video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .hero-video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.1) 40%,
+      rgba(0, 0, 0, 0.5) 70%,
+      rgba(0, 0, 0, 0.92) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 90px 40px 60px;
-    position: relative;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -20%;
-    right: -10%;
-    width: 60%;
-    height: 140%;
-    background: radial-gradient(ellipse at center, rgba(230, 174, 109, 0.06) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 0;
+    padding: 60px 40px 80px;
+    width: 100%;
   }
   .hero-meta {
     display: flex;
@@ -500,7 +527,8 @@
   }
 
   @media (max-width: 900px) {
-    .hero { padding: 48px 20px; }
+    .hero { min-height: 80vh; }
+    .hero-content { padding: 40px 20px 60px; }
     .hero-grid { grid-template-columns: 1fr; gap: 40px; }
     .hero-title .line-2 { padding-left: 0; }
     .hero-title .line-3 { text-align: left; }
@@ -1810,27 +1838,36 @@
 
     <!-- HERO -->
     <section class="hero">
-      <div class="hero-meta">
-        <span class="live">VOL. I / MMXXVI</span>
-        <span>A RECORD LABEL</span>
-        <span>ORLANDO, FL → THE WORLD</span>
+      <div class="hero-video-wrap">
+        <video autoplay muted loop playsinline poster="img/mr-don.jpg">
+          <source src="img/hero-banner.mp4" type="video/mp4">
+        </video>
+        <div class="hero-video-overlay"></div>
       </div>
 
-      <h1 class="hero-title">
-        <span class="line-1 lang-en">Connecting</span>
-        <span class="line-1 lang-es">Conectando</span>
-        <span class="line-2"><span lang="es">Bachata</span> <span class="lang-en">Music</span><span class="lang-es"><span lang="es">Música</span></span></span>
-        <span class="line-3 lang-en">Worldwide.</span>
-        <span class="line-3 lang-es"><span lang="es">al Mundo.</span></span>
-      </h1>
+      <div class="hero-content">
+        <div class="hero-meta">
+          <span class="live">VOL. I / MMXXVI</span>
+          <span>A RECORD LABEL</span>
+          <span>ORLANDO, FL → THE WORLD</span>
+        </div>
 
-      <div class="hero-grid">
-        <p class="hero-statement">
-          <span class="lang-en">The leading record label in <span lang="es">bachata</span> music — <em>developing artists, producing hits, and building careers</em> from Orlando to the world. Label. Studio. Management. The home of bachata's next generation.</span>
-          <span class="lang-es"><span lang="es">El sello discográfico líder en música bachata — <em>desarrollando artistas, produciendo éxitos, y construyendo carreras</em> desde Orlando al mundo. Sello. Estudio. Management. El hogar de la nueva generación de la bachata.</span></span>
-        </p>
-        <div>
-          <div class="hero-byline">— DerekVinci, <span class="lang-en">Founder</span><span class="lang-es"><span lang="es">Fundador</span></span> · Latin Grammys Voting Member</div>
+        <h1 class="hero-title">
+          <span class="line-1 lang-en">Connecting</span>
+          <span class="line-1 lang-es">Conectando</span>
+          <span class="line-2"><span lang="es">Bachata</span> <span class="lang-en">Music</span><span class="lang-es"><span lang="es">Música</span></span></span>
+          <span class="line-3 lang-en">Worldwide.</span>
+          <span class="line-3 lang-es"><span lang="es">al Mundo.</span></span>
+        </h1>
+
+        <div class="hero-grid">
+          <p class="hero-statement">
+            <span class="lang-en">The leading record label in <span lang="es">bachata</span> music — <em>developing artists, producing hits, and building careers</em> from Orlando to the world. Label. Studio. Management. The home of bachata's next generation.</span>
+            <span class="lang-es"><span lang="es">El sello discográfico líder en música bachata — <em>desarrollando artistas, produciendo éxitos, y construyendo carreras</em> desde Orlando al mundo. Sello. Estudio. Management. El hogar de la nueva generación de la bachata.</span></span>
+          </p>
+          <div>
+            <div class="hero-byline">— DerekVinci, <span class="lang-en">Founder</span><span class="lang-es"><span lang="es">Fundador</span></span> · Latin Grammys Voting Member</div>
+          </div>
         </div>
       </div>
     </section>
@@ -2221,7 +2258,7 @@
           </div>
         </div>
 
-        <!-- Formspree-ready form — replace YOUR_FORM_ID with actual Formspree endpoint -->
+        <!-- Formspree: set YOUR_FORM_ID, then add webhook https://www.eqsmusica.com/api/contact-notify for SMS alerts -->
         <form class="eqs-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <div class="form-row">
             <div class="form-group">
