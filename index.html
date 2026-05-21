@@ -396,51 +396,58 @@
 
   /* ---------- HERO ---------- */
   .hero {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0;
+    width: 100%;
     position: relative;
     min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     overflow: hidden;
-    background: var(--ink);
+    background: #000;
   }
   .hero-video-wrap {
     position: absolute;
-    inset: 0;
-    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
     overflow: hidden;
-    background: var(--ink);
   }
   .hero-video-wrap video {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center center;
-    background: var(--ink);
   }
   .hero-video-overlay {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(
-      180deg,
+      to bottom,
       rgba(0, 0, 0, 0.05) 0%,
       rgba(0, 0, 0, 0) 30%,
-      rgba(0, 0, 0, 0.15) 60%,
-      rgba(0, 0, 0, 0.75) 100%
+      rgba(0, 0, 0, 0.25) 65%,
+      rgba(0, 0, 0, 0.8) 100%
     );
-    z-index: 1;
+    z-index: 2;
     pointer-events: none;
   }
   .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     max-width: 1440px;
     margin: 0 auto;
     padding: 60px 40px 80px;
     width: 100%;
+  }
+  .hero-content * {
+    visibility: visible !important;
+    opacity: 1 !important;
   }
   .hero-meta {
     display: flex;
@@ -476,6 +483,7 @@
     line-height: 0.92;
     letter-spacing: -0.02em;
     margin-bottom: 40px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.6);
   }
   .hero-title .line-1 {
     display: block;
@@ -511,6 +519,7 @@
     line-height: 1.3;
     color: var(--cream);
     max-width: 560px;
+    text-shadow: 0 1px 12px rgba(0,0,0,0.5);
   }
   .hero-statement em {
     font-family: 'Allura', cursive;
@@ -1653,9 +1662,9 @@
   [lang="es"].lang-hidden,
   .lang-es-hidden { display: none; }
 
-  body.lang-es .lang-en { display: none; }
+  body:not(.lang-es) .lang-es { display: none !important; }
+  body.lang-es .lang-en { display: none !important; }
   body.lang-es .lang-es { display: inline !important; }
-  body:not(.lang-es) .lang-es { display: none; }
 
   /* ---------- FOOTER ---------- */
   footer {
