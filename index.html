@@ -445,10 +445,6 @@
     padding: 60px 40px 80px;
     width: 100%;
   }
-  .hero-content * {
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
   .hero-meta {
     display: flex;
     justify-content: space-between;
@@ -479,7 +475,7 @@
   .hero-title {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 400;
-    font-size: clamp(64px, 10vw, 168px);
+    font-size: clamp(48px, 8vw, 140px);
     line-height: 0.92;
     letter-spacing: -0.02em;
     margin-bottom: 40px;
@@ -495,9 +491,9 @@
     font-style: normal;
     font-weight: 400;
     color: var(--blood);
-    padding-left: 8vw;
-    font-size: 1.1em;
-    line-height: 1;
+    padding-left: 6vw;
+    font-size: 0.9em;
+    line-height: 1.1;
     letter-spacing: 0;
   }
   .hero-title .line-3 {
@@ -716,6 +712,8 @@
     background: var(--ink-2);
     padding: 120px 0;
     border-top: 1px solid var(--hairline);
+    position: relative;
+    overflow: hidden;
   }
   .roster-inner {
     max-width: 1440px;
