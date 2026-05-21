@@ -29,13 +29,13 @@
   <meta name="twitter:image" content="https://www.eqsmusica.com/og-cover.jpg">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%234CAF50'/><text x='50' y='72' font-size='48' text-anchor='middle' fill='white' font-family='monospace' font-weight='900'>EQS</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23000000'/><text x='50' y='72' font-size='48' text-anchor='middle' fill='%23E6AE6D' font-family='serif' font-weight='700'>EQS</text></svg>">
 
-  <!-- Fonts: only weights we render, with swap -->
+  <!-- Fonts: Cormorant Garamond (headings), Montserrat (body), Allura (accent) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600;700;900&family=Allura&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600;700;900&family=Allura&display=swap" rel="stylesheet">
 
   <!-- JSON-LD: Organization -->
   <script type="application/ld+json">
@@ -106,15 +106,15 @@
   <style>
   /* ---------- TOKENS ---------- */
   :root {
-    --ink: #0a0e1a;
-    --ink-2: #0f1424;
-    --cream: #FFFFFF;
-    --cream-dim: #b0b8c9;
-    --ash: #9aa6bf; /* lightened from #6b7a94 for WCAG AA on --ink */
-    --blood: #4CAF50;
-    --blood-dark: #388E3C;
-    --hairline: rgba(255, 255, 255, 0.10);
-    --focus-ring: #4CAF50;
+    --ink: #000000;
+    --ink-2: #282A23;
+    --cream: #D0CAC2;
+    --cream-dim: #828E98;
+    --ash: #828E98;
+    --blood: #E6AE6D;
+    --blood-dark: #C48B4A;
+    --hairline: rgba(208, 202, 194, 0.12);
+    --focus-ring: #E6AE6D;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -123,7 +123,7 @@
   body {
     background: var(--ink);
     color: var(--cream);
-    font-family: 'Archivo', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -143,8 +143,9 @@
     mix-blend-mode: overlay;
   }
 
-  .serif { font-family: 'Instrument Serif', serif; font-weight: 400; }
-  .mono { font-family: 'JetBrains Mono', monospace; }
+  .serif { font-family: 'Cormorant Garamond', serif; font-weight: 700; }
+  .mono { font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 0.08em; }
+  .script { font-family: 'Allura', cursive; font-weight: 400; }
 
   /* ---------- SKIP LINK ---------- */
   .skip-link {
@@ -154,7 +155,7 @@
     background: var(--blood);
     color: var(--cream);
     padding: 12px 24px;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     font-weight: 500;
     letter-spacing: 0.08em;
@@ -187,7 +188,7 @@
     overflow: hidden;
     border-bottom: 1px solid var(--ink);
     padding: 9px 0;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -215,7 +216,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(10, 14, 26, 0.85);
+    background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--hairline);
@@ -251,10 +252,10 @@
     font-weight: 900;
     letter-spacing: 0;
     transform: translateY(3px);
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
   }
   .logo em {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 400;
     font-size: 24px;
@@ -292,7 +293,7 @@
     transition: all 0.2s;
   }
   .nav-cta:hover { background: var(--blood); color: var(--cream); }
-  .nav-cta .arrow { font-family: 'Instrument Serif', serif; font-size: 16px; }
+  .nav-cta .arrow { font-family: 'Cormorant Garamond', serif; font-size: 16px; }
 
   /* ---------- HAMBURGER BUTTON ---------- */
   .hamburger {
@@ -340,7 +341,7 @@
     position: fixed;
     inset: 0;
     z-index: 99;
-    background: rgba(10, 14, 26, 0.97);
+    background: rgba(0, 0, 0, 0.97);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     flex-direction: column;
@@ -365,7 +366,7 @@
     margin-bottom: 40px;
   }
   .mobile-drawer-links a {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 42px;
     color: var(--cream);
     text-decoration: none;
@@ -402,7 +403,7 @@
   .hero-meta {
     display: flex;
     justify-content: space-between;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -427,7 +428,7 @@
   }
 
   .hero-title {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-weight: 400;
     font-size: clamp(64px, 10vw, 168px);
     line-height: 0.92;
@@ -440,9 +441,14 @@
   }
   .hero-title .line-2 {
     display: block;
-    font-style: italic;
+    font-family: 'Allura', cursive;
+    font-style: normal;
+    font-weight: 400;
     color: var(--blood);
     padding-left: 8vw;
+    font-size: 1.1em;
+    line-height: 1;
+    letter-spacing: 0;
   }
   .hero-title .line-3 {
     display: block;
@@ -458,18 +464,21 @@
     margin-top: 60px;
   }
   .hero-statement {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 28px;
     line-height: 1.3;
     color: var(--cream);
     max-width: 560px;
   }
   .hero-statement em {
-    font-style: italic;
+    font-family: 'Allura', cursive;
+    font-style: normal;
     color: var(--blood);
+    font-size: 1.25em;
+    letter-spacing: 0;
   }
   .hero-byline {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     color: var(--ash);
     text-transform: uppercase;
@@ -499,7 +508,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -525,15 +534,15 @@
   }
   .lane:last-child { border-right: none; padding-right: 0; }
   .lane:nth-child(2), .lane:nth-child(3) { padding-left: 40px; }
-  .lane:hover { background: rgba(76, 175, 80, 0.04); }
+  .lane:hover { background: rgba(230, 174, 109, 0.06); }
   .lane-num {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     color: var(--blood);
     letter-spacing: 0.14em;
   }
   .lane-title {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 42px;
     line-height: 1.05;
@@ -547,7 +556,7 @@
   }
   .lane-cta {
     margin-top: auto;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -579,7 +588,7 @@
     align-items: end;
   }
   .section-kicker {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -587,12 +596,12 @@
     margin-bottom: 12px;
   }
   .section-title {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(40px, 6vw, 84px);
     line-height: 0.95;
     letter-spacing: -0.02em;
   }
-  .section-title em { font-style: italic; color: var(--blood); }
+  .section-title em { font-family: 'Allura', cursive; font-style: normal; font-weight: 400; color: var(--blood); font-size: 1.1em; letter-spacing: 0; }
   .section-desc {
     color: var(--cream-dim);
     font-size: 16px;
@@ -617,7 +626,7 @@
     justify-content: space-between;
   }
   .stat-num {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 72px;
     line-height: 0.95;
     letter-spacing: -0.03em;
@@ -625,7 +634,7 @@
   }
   .stat-num em { color: var(--blood); font-style: normal; }
   .stat-label {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -685,15 +694,15 @@
     inset: 0;
     background-image: repeating-linear-gradient(
       45deg,
-      rgba(10, 14, 26, 0) 0px,
-      rgba(10, 14, 26, 0) 16px,
-      rgba(10, 14, 26, 0.08) 16px,
-      rgba(10, 14, 26, 0.08) 17px
+      rgba(0, 0, 0, 0) 0px,
+      rgba(0, 0, 0, 0) 16px,
+      rgba(0, 0, 0, 0.08) 16px,
+      rgba(0, 0, 0, 0.08) 17px
     );
     pointer-events: none;
   }
   .feature-visual-label {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -702,7 +711,7 @@
     z-index: 1;
   }
   .feature-visual-name {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 72px;
     line-height: 1;
@@ -718,20 +727,20 @@
     padding-right: 20px;
   }
   .feature-num {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     color: var(--blood);
     letter-spacing: 0.16em;
     margin-bottom: 16px;
   }
   .feature-name {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 88px;
     line-height: 0.9;
     margin-bottom: 24px;
     letter-spacing: -0.02em;
   }
-  .feature-name em { font-style: italic; color: var(--blood); }
+  .feature-name em { font-family: 'Allura', cursive; font-style: normal; font-weight: 400; color: var(--blood); font-size: 1.15em; letter-spacing: 0; }
   .feature-bio {
     font-size: 17px;
     line-height: 1.55;
@@ -748,14 +757,14 @@
     margin-bottom: 28px;
   }
   .feature-stat-item .n {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 32px;
     color: var(--cream);
     display: block;
     line-height: 1;
   }
   .feature-stat-item .l {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -771,7 +780,7 @@
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -786,7 +795,7 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -799,107 +808,170 @@
   }
   .btn-book:hover { background: var(--blood); border-color: var(--blood); }
 
-  /* Roster Grid — visual artist cards */
+  /* Roster Grid — uniform editorial portraits */
   .roster-grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: minmax(120px, auto);
-    gap: 1px;
-    background: var(--hairline);
-    border-top: 1px solid var(--hairline);
-    border-bottom: 1px solid var(--hairline);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
   }
   .artist-card {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
     background: var(--ink-2);
-    padding: 32px 28px;
+    text-decoration: none;
+    color: var(--cream);
+    display: block;
+    isolation: isolate;
+  }
+  .artist-card-img {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center 22%;
+    background-repeat: no-repeat;
+    transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+    z-index: 0;
+    filter: saturate(0.92) contrast(1.02);
+  }
+  .artist-card:hover .artist-card-img { transform: scale(1.06); }
+  .artist-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+      rgba(0,0,0,0.10) 0%,
+      rgba(0,0,0,0.10) 38%,
+      rgba(0,0,0,0.55) 68%,
+      rgba(0,0,0,0.92) 100%);
+    z-index: 1;
+    transition: opacity 0.3s;
+  }
+  .artist-card-content {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
-    text-decoration: none;
-    color: var(--cream);
-    transition: background 0.25s;
-    position: relative;
-    min-height: 280px;
-    overflow: hidden;
+    padding: 22px;
   }
-  .artist-card:hover { background: var(--ink); }
-  .artist-card:hover .artist-name { color: var(--blood); }
+  .artist-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+  }
   .artist-num {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 10px;
-    letter-spacing: 0.14em;
-    color: var(--ash);
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: var(--cream);
+    opacity: 0.85;
+    text-transform: uppercase;
+  }
+  .artist-card-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
   }
   .artist-name {
-    font-family: 'Instrument Serif', serif;
-    font-size: 42px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: clamp(28px, 2.4vw, 38px);
     line-height: 1;
     letter-spacing: -0.01em;
+    color: var(--cream);
     transition: color 0.25s;
   }
+  .artist-card:hover .artist-name { color: var(--blood); }
   .artist-tag {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    color: var(--cream-dim);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    color: var(--cream);
+    opacity: 0.7;
     text-transform: uppercase;
     line-height: 1.5;
   }
   .artist-card-actions {
     display: flex;
-    gap: 12px;
-    margin-top: 8px;
+    gap: 8px;
+    margin-top: 14px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(8px);
+    transition: max-height 0.35s ease, opacity 0.25s ease, transform 0.35s ease;
+  }
+  .artist-card:hover .artist-card-actions,
+  .artist-card:focus-within .artist-card-actions {
+    max-height: 60px;
+    opacity: 1;
+    transform: translateY(0);
   }
   .artist-card-actions a {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 10px;
-    letter-spacing: 0.1em;
+    font-weight: 600;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    padding: 6px 12px;
+    padding: 8px 14px;
     text-decoration: none;
     transition: all 0.2s;
   }
   .artist-card-actions .btn-listen {
-    color: var(--blood);
-    border: 1px solid var(--blood);
+    color: var(--ink);
+    background: var(--blood);
   }
   .artist-card-actions .btn-listen:hover {
-    background: var(--blood);
-    color: var(--cream);
+    background: var(--cream);
   }
   .artist-card-actions .btn-book-sm {
     color: var(--cream);
-    border: 1px solid var(--hairline);
+    border: 1px solid rgba(208, 202, 194, 0.45);
   }
   .artist-card-actions .btn-book-sm:hover {
     background: var(--cream);
     color: var(--ink);
+    border-color: var(--cream);
   }
 
-  /* Card spans for asymmetric layout */
-  .card-wide { grid-column: span 6; }
-  .card-mid { grid-column: span 4; }
-  .card-tall { grid-column: span 3; grid-row: span 2; }
-  .card-small { grid-column: span 3; }
-  .card-flex { grid-column: span 4; }
-
-  /* Artist card photos */
-  .artist-card[data-img] {
-    background-size: cover;
-    background-position: center top;
-  }
-  .artist-card[data-img]::before {
-    content: '';
+  /* Placeholder card (no photo) */
+  .artist-card-placeholder {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(10,14,26,0.2) 0%, rgba(10,14,26,0.85) 70%, rgba(10,14,26,0.95) 100%);
-    transition: opacity 0.3s;
+    z-index: 0;
+    background: var(--ink-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
-  .artist-card[data-img]:hover::before {
-    background: linear-gradient(180deg, rgba(10,14,26,0.1) 0%, rgba(10,14,26,0.75) 60%, rgba(10,14,26,0.92) 100%);
+  .artist-card-placeholder::before {
+    content: 'EQS';
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: clamp(90px, 11vw, 160px);
+    line-height: 1;
+    color: var(--blood);
+    opacity: 0.18;
+    letter-spacing: -0.02em;
   }
-  .artist-card[data-img] > * { position: relative; z-index: 1; }
+  .artist-card-placeholder::after {
+    content: 'COMING SOON';
+    position: absolute;
+    bottom: 90px;
+    left: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    color: var(--blood);
+  }
 
   /* Feature visual with real photo */
   .feature-visual.has-photo { background: none; }
@@ -908,32 +980,34 @@
     inset: 0;
     width: 100%; height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center 18%;
+    transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+    filter: saturate(0.95) contrast(1.02);
   }
+  .roster-feature:hover .feature-visual.has-photo img { transform: scale(1.04); }
   .feature-visual.has-photo::after {
-    background: linear-gradient(180deg, rgba(10,14,26,0) 0%, rgba(10,14,26,0.6) 100%);
+    background: linear-gradient(180deg,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0.15) 45%,
+      rgba(0,0,0,0.7) 100%);
     z-index: 1;
   }
   .feature-visual.has-photo .feature-visual-name,
   .feature-visual.has-photo .feature-visual-label { z-index: 2; }
 
   @media (max-width: 1100px) {
-    .card-wide, .card-mid, .card-tall, .card-small, .card-flex {
-      grid-column: span 6;
-      grid-row: auto;
-    }
-    .roster-grid { grid-template-columns: repeat(6, 1fr); }
+    .roster-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   }
   @media (max-width: 700px) {
-    .roster-grid { grid-template-columns: 1fr; }
-    .card-wide, .card-mid, .card-tall, .card-small, .card-flex {
-      grid-column: span 1;
-    }
+    .roster-grid { grid-template-columns: 1fr; gap: 14px; }
     .roster { padding: 70px 0; }
     .roster-inner { padding: 0 20px; }
     .roster-feature { grid-template-columns: 1fr; gap: 36px; margin-bottom: 60px; }
     .feature-name { font-size: 56px; }
     .feature-visual-name { font-size: 48px; }
+    .artist-card { aspect-ratio: 4 / 5; max-width: 460px; margin: 0 auto; width: 100%; }
+    /* On touch devices, always show actions */
+    .artist-card-actions { max-height: 60px; opacity: 1; transform: none; }
   }
 
   /* ---------- WORK / RELEASES ---------- */
@@ -953,7 +1027,7 @@
   }
   .work-link {
     justify-self: end;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -984,14 +1058,14 @@
   }
   .channel-block:hover { background: var(--ink); }
   .channel-platform {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--blood);
   }
   .channel-title {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 38px;
     line-height: 1.05;
   }
@@ -1003,7 +1077,7 @@
   }
   .channel-cta {
     margin-top: auto;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -1060,7 +1134,7 @@
     padding: 8px 20px;
   }
   .mini-player-label {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -1112,7 +1186,7 @@
     bottom: -20px;
     left: 0;
     right: 0;
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 220px;
     line-height: 0.8;
@@ -1133,7 +1207,7 @@
     align-items: start;
   }
   .founder-kicker {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -1141,7 +1215,7 @@
     margin-bottom: 28px;
   }
   .founder-title {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(56px, 7vw, 108px);
     line-height: 0.92;
     letter-spacing: -0.02em;
@@ -1149,7 +1223,7 @@
   }
   .founder-title em { font-style: italic; }
   .founder-role {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 22px;
     line-height: 1.3;
@@ -1157,14 +1231,14 @@
     opacity: 0.9;
   }
   .founder-credits {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     line-height: 2;
     opacity: 0.85;
   }
-  .founder-credits div { border-bottom: 1px solid rgba(245, 239, 230, 0.2); padding: 8px 0; }
+  .founder-credits div { border-bottom: 1px solid rgba(208, 202, 194, 0.2); padding: 8px 0; }
   .founder-body {
     font-size: 18px;
     line-height: 1.6;
@@ -1176,7 +1250,7 @@
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -1209,7 +1283,7 @@
     gap: 60px;
   }
   .partners-label {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -1220,7 +1294,7 @@
   .partners-label .es { display: none; }
   .partners-label span { color: var(--cream-dim); display: block; margin-top: 8px; }
   .partners-list {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(24px, 3vw, 36px);
     line-height: 1.4;
     color: var(--cream);
@@ -1255,7 +1329,7 @@
     border-bottom: 1px solid var(--hairline);
   }
   .social-proof-header {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -1279,7 +1353,7 @@
     justify-content: space-between;
   }
   .quote-text {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 22px;
     line-height: 1.35;
@@ -1294,7 +1368,7 @@
     margin-bottom: 12px;
   }
   .quote-attr {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -1331,7 +1405,7 @@
     max-width: 420px;
   }
   .contact-email-fallback {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     color: var(--ash);
     letter-spacing: 0.1em;
@@ -1353,7 +1427,7 @@
   .form-group { display: flex; flex-direction: column; gap: 6px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .form-group label {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -1366,7 +1440,7 @@
     border: 1px solid var(--hairline);
     color: var(--cream);
     padding: 14px 16px;
-    font-family: 'Archivo', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     transition: border-color 0.2s;
     appearance: none;
@@ -1404,7 +1478,7 @@
     background: var(--blood);
     color: var(--cream);
     border: none;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     font-weight: 500;
     letter-spacing: 0.12em;
@@ -1414,7 +1488,7 @@
     align-self: flex-start;
   }
   .form-submit:hover { background: var(--blood-dark); letter-spacing: 0.16em; }
-  .form-submit .arrow { font-family: 'Instrument Serif', serif; font-size: 18px; }
+  .form-submit .arrow { font-family: 'Cormorant Garamond', serif; font-size: 18px; }
 
   @media (max-width: 900px) {
     .contact-form-section { padding: 70px 20px; }
@@ -1430,16 +1504,16 @@
     text-align: center;
   }
   .final-statement {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(44px, 6.5vw, 96px);
     line-height: 1;
     letter-spacing: -0.02em;
     margin-bottom: 48px;
   }
-  .final-statement em { font-style: italic; color: var(--blood); }
+  .final-statement em { font-family: 'Allura', cursive; font-style: normal; font-weight: 400; color: var(--blood); font-size: 1.15em; letter-spacing: 0; }
   .final-contact {
     display: inline-block;
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: clamp(20px, 2.5vw, 32px);
     color: var(--cream);
@@ -1450,7 +1524,7 @@
   }
   .final-contact:hover { border-bottom-color: var(--blood); color: var(--blood); }
   .final-meta {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -1479,7 +1553,7 @@
     flex: 1;
     text-align: center;
     padding: 14px 8px;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -1508,7 +1582,7 @@
   .lang-toggle {
     display: inline-flex;
     border: 1px solid var(--hairline);
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -1555,7 +1629,7 @@
     margin-bottom: 60px;
   }
   .footer-col h5 {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -1605,7 +1679,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -1865,7 +1939,7 @@
         <!-- Featured artist — editorial hero treatment -->
         <div class="roster-feature reveal">
           <div class="feature-visual has-photo">
-            <img src="https://static.wixstatic.com/media/773c54_82d88a9acba2497db6e2c34b2e7d1b5b~mv2.jpg/v1/fill/w_920,h_1150,al_c,q_85,usm_0.66_1.00_0.01,enc_auto,quality_auto/773c54_82d88a9acba2497db6e2c34b2e7d1b5b~mv2.jpg" alt="Mr. Don — EQS Música featured artist" loading="lazy" decoding="async" width="920" height="1150">
+            <img src="img/mr-don.jpg" alt="Mr. Don — EQS Música featured artist" loading="lazy" decoding="async" width="1280" height="720" style="object-position: 70% 25%;">
             <div class="feature-visual-name">Mr.<br><em>Don</em></div>
             <div class="feature-visual-label"><span lang="es">EQS Música</span> · Featured Artist</div>
           </div>
@@ -1897,81 +1971,117 @@
           </div>
         </div>
 
-        <!-- Full roster — asymmetric grid with visual artist cards -->
+        <!-- Full roster — editorial portrait grid -->
         <div class="roster-grid">
-          <a href="https://www.eqsmusica.com/j-salez" class="artist-card card-wide reveal" data-img style="background-image:url('https://static.wixstatic.com/media/773c54_ec0a4b4ee97c413fb5d93963462a74c4~mv2.jpg/v1/fill/w_700,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_auto,quality_auto/773c54_ec0a4b4ee97c413fb5d93963462a74c4~mv2.jpg')">
-            <div class="artist-num">EQS / 02</div>
-            <div>
-              <div class="artist-name">J Salez</div>
-            </div>
-            <div class="artist-tag">20+ SINGLES · 15M+ PLAYS · EQS ORIGINAL</div>
-            <div class="artist-card-actions">
-              <a href="https://open.spotify.com/artist/7du7SizqDeaP96ds19p1yu" target="_blank" rel="noopener" class="btn-listen" onclick="event.stopPropagation()">Listen</a>
-              <a href="#contact" class="btn-book-sm" onclick="event.stopPropagation()">Book</a>
-            </div>
-          </a>
-          <a href="https://www.eqsmusica.com/dj-khalid" class="artist-card card-mid reveal reveal-delay-1" data-img style="background-image:url('https://static.wixstatic.com/media/f6cc4b_738068b068ec44e39974a60d02f6d865~mv2.jpg/v1/fill/w_600,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_auto,quality_auto/f6cc4b_738068b068ec44e39974a60d02f6d865~mv2.jpg')">
-            <div class="artist-num">EQS / 03</div>
-            <div class="artist-name">DJ Khalid</div>
-            <div class="artist-tag">308K MONTHLY · 76K YT · 40+ EVENTS/YR</div>
-            <div class="artist-card-actions">
-              <a href="https://open.spotify.com/search/dj%20khalid%20bachata" target="_blank" rel="noopener" class="btn-listen" onclick="event.stopPropagation()">Listen</a>
-              <a href="#contact" class="btn-book-sm" onclick="event.stopPropagation()">Book</a>
+          <a href="https://www.eqsmusica.com/j-salez" class="artist-card reveal">
+            <div class="artist-card-img" style="background-image:url('img/j-salez.jpg'); background-position: 65% 30%;"></div>
+            <div class="artist-card-content">
+              <div class="artist-card-top"><span class="artist-num">EQS / 02</span></div>
+              <div class="artist-card-bottom">
+                <div class="artist-name">J Salez</div>
+                <div class="artist-tag">20+ Singles · 15M+ Plays</div>
+                <div class="artist-card-actions">
+                  <a href="https://open.spotify.com/artist/7du7SizqDeaP96ds19p1yu" target="_blank" rel="noopener" class="btn-listen" onclick="event.stopPropagation()">Listen</a>
+                  <a href="#contact" class="btn-book-sm" onclick="event.stopPropagation()">Book</a>
+                </div>
+              </div>
             </div>
           </a>
-          <a href="https://www.eqsmusica.com/johandy" class="artist-card card-flex reveal" data-img style="background-image:url('https://static.wixstatic.com/media/773c54_a248f219159d48b78912ef5798939c39~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_auto,quality_auto/773c54_a248f219159d48b78912ef5798939c39~mv2.jpg')">
-            <div class="artist-num">EQS / 04</div>
-            <div class="artist-name">Johandy</div>
-            <div class="artist-tag">BREAKOUT VOCALIST · RECORDING NOW</div>
-            <div class="artist-card-actions">
-              <a href="#" class="btn-listen" onclick="event.stopPropagation()">Listen</a>
-              <a href="#contact" class="btn-book-sm" onclick="event.stopPropagation()">Book</a>
+          <a href="https://www.eqsmusica.com/dj-khalid" class="artist-card reveal reveal-delay-1">
+            <div class="artist-card-placeholder"></div>
+            <div class="artist-card-content">
+              <div class="artist-card-top"><span class="artist-num">EQS / 03</span></div>
+              <div class="artist-card-bottom">
+                <div class="artist-name">DJ Khalid</div>
+                <div class="artist-tag">308K Monthly · 40+ Events/Yr</div>
+                <div class="artist-card-actions">
+                  <a href="https://open.spotify.com/search/dj%20khalid%20bachata" target="_blank" rel="noopener" class="btn-listen" onclick="event.stopPropagation()">Listen</a>
+                  <a href="#contact" class="btn-book-sm" onclick="event.stopPropagation()">Book</a>
+                </div>
+              </div>
             </div>
           </a>
-          <a href="https://www.eqsmusica.com/vinny-rivera" class="artist-card card-flex reveal reveal-delay-1" data-img style="background-image:url('https://static.wixstatic.com/media/773c54_11fa15b7430d47348987d6cfdf59c63b~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_auto,quality_auto/773c54_11fa15b7430d47348987d6cfdf59c63b~mv2.jpg')">
-            <div class="artist-num">EQS / 05</div>
-            <div class="artist-name">Vinny Rivera</div>
-            <div class="artist-tag">SINGER · PRODUCER · COLLABORATOR</div>
-            <div class="artist-card-actions">
-              <a href="#" class="btn-listen" onclick="event.stopPropagation()">Listen</a>
-              <a href="#contact" class="btn-book-sm" onclick="event.stopPropagation()">Book</a>
+          <a href="https://www.eqsmusica.com/johandy" class="artist-card reveal">
+            <div class="artist-card-img" style="background-image:url('img/johandy.jpg'); background-position: 55% 30%;"></div>
+            <div class="artist-card-content">
+              <div class="artist-card-top"><span class="artist-num">EQS / 04</span></div>
+              <div class="artist-card-bottom">
+                <div class="artist-name">Johandy</div>
+                <div class="artist-tag">Breakout Vocalist</div>
+                <div class="artist-card-actions">
+                  <a href="#" class="btn-listen" onclick="event.stopPropagation()">Listen</a>
+                  <a href="#contact" class="btn-book-sm" onclick="event.stopPropagation()">Book</a>
+                </div>
+              </div>
             </div>
           </a>
-          <a href="https://www.eqsmusica.com/tony-lozano" class="artist-card card-flex reveal" data-img style="background-image:url('https://static.wixstatic.com/media/773c54_702008ab6d6c40689b9d3c5097f48003~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_auto,quality_auto/773c54_702008ab6d6c40689b9d3c5097f48003~mv2.jpg')">
-            <div class="artist-num">EQS / 06</div>
-            <div class="artist-name">Tony Lozano</div>
-            <div class="artist-tag"><span lang="es">VOICE · BACHATA TRADITION</span></div>
-            <div class="artist-card-actions">
-              <a href="#" class="btn-listen" onclick="event.stopPropagation()">Listen</a>
-              <a href="#contact" class="btn-book-sm" onclick="event.stopPropagation()">Book</a>
+          <a href="https://www.eqsmusica.com/vinny-rivera" class="artist-card reveal reveal-delay-1">
+            <div class="artist-card-img" style="background-image:url('img/vinny-rivera.jpg'); background-position: 32% 35%;"></div>
+            <div class="artist-card-content">
+              <div class="artist-card-top"><span class="artist-num">EQS / 05</span></div>
+              <div class="artist-card-bottom">
+                <div class="artist-name">Vinny Rivera</div>
+                <div class="artist-tag">Singer · Producer</div>
+                <div class="artist-card-actions">
+                  <a href="#" class="btn-listen" onclick="event.stopPropagation()">Listen</a>
+                  <a href="#contact" class="btn-book-sm" onclick="event.stopPropagation()">Book</a>
+                </div>
+              </div>
             </div>
           </a>
-          <a href="https://www.eqsmusica.com/jhonny-evidence" class="artist-card card-flex reveal reveal-delay-1" data-img style="background-image:url('https://static.wixstatic.com/media/773c54_5ef5c5c9b0e14a1a9e322d7d81a9f3eb~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_auto,quality_auto/773c54_5ef5c5c9b0e14a1a9e322d7d81a9f3eb~mv2.jpg')">
-            <div class="artist-num">EQS / 07</div>
-            <div class="artist-name">Jhonny Evidence</div>
-            <div class="artist-tag">RECORDING ARTIST · EQS CATALOG</div>
-            <div class="artist-card-actions">
-              <a href="#" class="btn-listen" onclick="event.stopPropagation()">Listen</a>
-              <a href="#contact" class="btn-book-sm" onclick="event.stopPropagation()">Book</a>
+          <a href="https://www.eqsmusica.com/tony-lozano" class="artist-card reveal">
+            <div class="artist-card-img" style="background-image:url('img/tony-lozano.jpg'); background-position: 65% 30%;"></div>
+            <div class="artist-card-content">
+              <div class="artist-card-top"><span class="artist-num">EQS / 06</span></div>
+              <div class="artist-card-bottom">
+                <div class="artist-name">Tony Lozano</div>
+                <div class="artist-tag"><span lang="es">Voice · Bachata Tradition</span></div>
+                <div class="artist-card-actions">
+                  <a href="#" class="btn-listen" onclick="event.stopPropagation()">Listen</a>
+                  <a href="#contact" class="btn-book-sm" onclick="event.stopPropagation()">Book</a>
+                </div>
+              </div>
             </div>
           </a>
-          <a href="https://www.eqsmusica.com/dj-tagada" class="artist-card card-mid reveal" data-img style="background-image:url('https://static.wixstatic.com/media/f6cc4b_ff16c674bc0b4e3f97b26f07ecfec002~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_auto,quality_auto/f6cc4b_ff16c674bc0b4e3f97b26f07ecfec002~mv2.jpg')">
-            <div class="artist-num">EQS / 08</div>
-            <div class="artist-name">DJ Taga'Da</div>
-            <div class="artist-tag">DJ · PRODUCER · GLOBAL EVENTS</div>
-            <div class="artist-card-actions">
-              <a href="#" class="btn-listen" onclick="event.stopPropagation()">Listen</a>
-              <a href="#contact" class="btn-book-sm" onclick="event.stopPropagation()">Book</a>
+          <a href="https://www.eqsmusica.com/jhonny-evidence" class="artist-card reveal reveal-delay-1">
+            <div class="artist-card-img" style="background-image:url('img/jhonny-evidence.jpg'); background-position: 45% 30%;"></div>
+            <div class="artist-card-content">
+              <div class="artist-card-top"><span class="artist-num">EQS / 07</span></div>
+              <div class="artist-card-bottom">
+                <div class="artist-name">Jhonny Evidence</div>
+                <div class="artist-tag">Recording Artist</div>
+                <div class="artist-card-actions">
+                  <a href="#" class="btn-listen" onclick="event.stopPropagation()">Listen</a>
+                  <a href="#contact" class="btn-book-sm" onclick="event.stopPropagation()">Book</a>
+                </div>
+              </div>
             </div>
           </a>
-          <a href="https://www.eqsmusica.com" class="artist-card card-wide reveal reveal-delay-1">
-            <div class="artist-num">EQS / 09</div>
-            <div>
-              <div class="artist-name">Ronny Mercedes</div>
+          <a href="https://www.eqsmusica.com/dj-tagada" class="artist-card reveal">
+            <div class="artist-card-placeholder"></div>
+            <div class="artist-card-content">
+              <div class="artist-card-top"><span class="artist-num">EQS / 08</span></div>
+              <div class="artist-card-bottom">
+                <div class="artist-name">DJ Taga'Da</div>
+                <div class="artist-tag">DJ · Global Events</div>
+                <div class="artist-card-actions">
+                  <a href="#" class="btn-listen" onclick="event.stopPropagation()">Listen</a>
+                  <a href="#contact" class="btn-book-sm" onclick="event.stopPropagation()">Book</a>
+                </div>
+              </div>
             </div>
-            <div class="artist-tag">ACTIVE ROSTER · FULL PROFILE COMING SOON</div>
-            <div class="artist-card-actions">
-              <a href="#contact" class="btn-book-sm" onclick="event.stopPropagation()">Book</a>
+          </a>
+          <a href="https://www.eqsmusica.com" class="artist-card reveal reveal-delay-1">
+            <div class="artist-card-placeholder"></div>
+            <div class="artist-card-content">
+              <div class="artist-card-top"><span class="artist-num">EQS / 09</span></div>
+              <div class="artist-card-bottom">
+                <div class="artist-name">Ronny Mercedes</div>
+                <div class="artist-tag">Active Roster</div>
+                <div class="artist-card-actions">
+                  <a href="#contact" class="btn-book-sm" onclick="event.stopPropagation()">Book</a>
+                </div>
+              </div>
             </div>
           </a>
         </div>
@@ -2213,7 +2323,7 @@
 
       <div class="footer-col">
         <h5><span class="lang-en">Direct Line</span><span class="lang-es"><span lang="es">Línea Directa</span></span></h5>
-        <a href="mailto:DEREKVINCI@EQSMUSICA.COM" style="font-family:'Instrument Serif',serif; font-style:italic; font-size:17px;">DEREKVINCI@<br>EQSMUSICA.COM</a>
+        <a href="mailto:DEREKVINCI@EQSMUSICA.COM" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:17px;">DEREKVINCI@<br>EQSMUSICA.COM</a>
         <p style="color:var(--ash); font-size:12px; margin-top:12px; line-height:1.6;">EQS MUSIC MANAGEMENT LLC<br>Orlando, Florida</p>
       </div>
     </div>
